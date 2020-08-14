@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 class Counter extends Component {
+    
     constructor (props) {
         super(props)
         this.state = {contador: this.props.contadorInicial }
@@ -9,6 +10,8 @@ class Counter extends Component {
         }, 1000);
 
     }
+
+    
     
     render() {
         // const contador = 0
@@ -19,6 +22,10 @@ class Counter extends Component {
             </div>
         )
     }
+}
+
+Counter.defaultProps = {
+    contadorInicial: 0
 }
 
 

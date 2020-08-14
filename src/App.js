@@ -43,8 +43,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <CounterNumber />
+        <Counter  contadorInicial={100}/>
+        {/* <CounterNumber /> */}
         <Hello title="PROPS !!"/>
         <ComponentHello title="PROPS COMPONENT"/>
         <Text number={8}
