@@ -26,10 +26,17 @@ export default class Conditional extends Component {
         this.state = { mostrarA: true }
     }
     render() {
+        // ? Opción 1
+        // const conditionalComponent = this.state.mostrarA ? 
+        //     <ComponenteA /> : <ComponenteB />
         return (
             <div>
                 <h4>Conditional rendering</h4>
                 {useConditionalRender(this.state.mostrarA)}
+
+                {/* // ? Opción 2 */}
+                { this.state.mostrarA ? 
+                    <ComponenteA /> : <ComponenteB />}
                 {/* <ComponenteA />
                 <ComponenteB /> */}
             </div>
