@@ -5,6 +5,7 @@ import './Counter';
 import './App.css';
 import Counter from './Counter';
 import CounterNumber from './CounterNumber';
+import Conditional from './sections/Conditional';
 
 function Hello (props) {
   return <h2>{props.title}</h2>
@@ -47,6 +48,7 @@ function App() {
         {/* <CounterNumber /> */}
         <Hello title="PROPS !!"/>
         <ComponentHello title="PROPS COMPONENT"/>
+        <Conditional />
         <Text number={8}
           arrayNumbers={[2, 4 ,6]}
           objectWithInfo={ {key: 'value1', key2: 'value2'} }
