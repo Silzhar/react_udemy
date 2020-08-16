@@ -8,7 +8,8 @@ import './App.css';
 import Conditional from './sections/Conditional';
 import ConditionalButtons from './sections/ConditionalButtons';
 import cars from './data/cars.json'
-
+import MouseEvent from './MouseEvent'
+import Forms from './Forms';
 
 function Hello (props) {
   return <h2>{props.title}</h2>
@@ -65,11 +66,12 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         {/* <Counter  contadorInicial={100}/> */}
         {/* <CounterNumber /> */}
-        <Hello title="PROPS !!"/>
-        <ComponentHello title="PROPS COMPONENT"/>
+        <Forms />
+        {/* <Hello title="PROPS !!"/>
+        <ComponentHello title="PROPS COMPONENT"/> */}
         <Conditional />
         <ConditionalButtons />
-
+        <MouseEvent />
         {/* <Text number={8}
           arrayNumbers={[2, 4 ,6]}
           objectWithInfo={ {key: 'value1', key2: 'value2'} }

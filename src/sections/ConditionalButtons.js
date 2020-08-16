@@ -7,8 +7,12 @@ class LoginButton extends Component {
 }
 
 class LogoutButton extends Component {
+    handleClick (event) {
+        console.log(event)
+        alert('in button !')
+    }
     render () {
-        return <button>Acabar sesión</button>
+        return <button onClick={this.handleClick}>Acabar sesión</button>
     }
 }
 
