@@ -18,8 +18,8 @@ class Article extends Component {
         <p>Artículo escrito por: {this.props.author}</p>
         <Box>{this.props.date}</Box>
         <article>{this.props.children}</article>
-        <p>Contenido envuelto dentro del componente Article</p>
-        <strong>Y sus etiquetas añadidas</strong>
+        <p>{this.props.textOne}</p>
+        <strong>{this.props.textTwo}</strong>
       </section>
     );
   }
@@ -36,6 +36,8 @@ export default class ChildrenProps extends Component {
             author='Luis Ruiz'
             date={new Date().toLocaleDateString()}
             title='Artículo en children props'
+            textOne='Contenido envuelto dentro del componente Article'
+            textTwo='Y sus etiquetas añadidas'
         />
       </div>
     );
