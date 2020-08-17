@@ -10,6 +10,7 @@ import ConditionalButtons from './sections/ConditionalButtons';
 import cars from './data/cars.json'
 import MouseEvent from './MouseEvent'
 import Forms from './Forms';
+import ChildrenProps from './ChildrenProps'
 
 function Hello (props) {
   return <h2>{props.title}</h2>
@@ -67,6 +68,7 @@ function App() {
         {/* <Counter  contadorInicial={100}/> */}
         {/* <CounterNumber /> */}
         <Forms />
+        <ChildrenProps />
         {/* <Hello title="PROPS !!"/>
         <ComponentHello title="PROPS COMPONENT"/> */}
         <Conditional />
