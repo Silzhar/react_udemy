@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types' ;
 
 class Box extends Component {
   render() {
@@ -11,15 +12,31 @@ class Box extends Component {
 }
 
 class Article extends Component {
+  static propTypes = {
+    author: PropTypes.string.isRequired
+  }
+  
+  // ? con PropTypes lo siguiente no es necesario.
+  // constructor (props) {
+  //   super(props)
+  //   if (typeof props.author === 'undefined')  {
+  //     console.warn('author prop is required')
+  //     throw new Error('author prop is required')
+  //   }
+  // }
+
   render() {
+    const { author, children, date, title, textOne, textTwo } = this.props
+
     return (
       <section style={{ border: '2px solid aqua', margin: 4, padding: 4 }}>
-        <h2>{this.props.title}</h2>
-        <p>Artículo escrito por: {this.props.author}</p>
-        <Box>{this.props.date}</Box>
-        <article>{this.props.children}</article>
-        <p>{this.props.textOne}</p>
-        <strong>{this.props.textTwo}</strong>
+        <h2>{title}</h2>
+        {/* En caso de no pasar la prop eliminamos el texto */}
+        {author && <p>Artículo escrito por: {author}</p>}
+        <Box>{date}</Box>
+        <article>{children}</article>
+        <p>{textOne}</p>
+        <strong>{textTwo}</strong>
       </section>
     );
   }
