@@ -11,6 +11,7 @@ import cars from './data/cars.json'
 import MouseEvent from './MouseEvent'
 import Forms from './Forms';
 import ChildrenProps from './ChildrenProps'
+import Fetch from './sections/Fetch';
 
 function Hello (props) {
   return <h2>{props.title}</h2>
@@ -67,6 +68,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         {/* <Counter  contadorInicial={100}/> */}
         {/* <CounterNumber /> */}
+        <Fetch />
         <Forms />
         <ChildrenProps />
         {/* <Hello title="PROPS !!"/>
