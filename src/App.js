@@ -12,6 +12,7 @@ import MouseEvent from './MouseEvent'
 import Forms from './Forms';
 import ChildrenProps from './ChildrenProps'
 import Fetch from './sections/Fetch';
+import CicloActualizacion from './sections/CicloActualizacion';
 
 function Hello (props) {
   return <h2>{props.title}</h2>
@@ -65,9 +66,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         {/* <Counter  contadorInicial={100}/> */}
         {/* <CounterNumber /> */}
+        <CicloActualizacion />
         <Fetch />
         <Forms />
         <ChildrenProps />
