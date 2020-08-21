@@ -13,6 +13,7 @@ import Forms from './Forms';
 import ChildrenProps from './ChildrenProps'
 import Fetch from './sections/Fetch';
 import CicloActualizacion from './sections/CicloActualizacion';
+import ComponentWillUnmount from './sections/ComponentWillUnmount';
 
 function Hello (props) {
   return <h2>{props.title}</h2>
@@ -69,6 +70,7 @@ function App() {
         {/* <Counter  contadorInicial={100}/> */}
         {/* <CounterNumber /> */}
         <CicloActualizacion />
+        <ComponentWillUnmount />
         <Fetch />
         <Forms />
         <ChildrenProps />

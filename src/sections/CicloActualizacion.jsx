@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
 const ANIMALS_IMGS = {
@@ -11,7 +11,7 @@ const ANIMALS_IMGS = {
 
 const ANIMALS = Object.keys(ANIMALS_IMGS);
 
-class AnimalImage extends Component {
+class AnimalImage extends PureComponent {
   state = {
     src: ANIMALS_IMGS[this.props.animal],
   };
