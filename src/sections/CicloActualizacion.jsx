@@ -9,6 +9,8 @@ const ANIMALS_IMGS = {
     'https://static.scientificamerican.com/espanol/cache/file/050D641B-C40F-460A-B892534B0024CB3C_source.jpg?w=390&h=520&4147C8A7-B3A4-4126-9293322177AC2D1C',
 };
 
+const ANIMALS = Object.keys(ANIMALS_IMGS);
+
 class AnimalImage extends Component {
   state = {
     src: ANIMALS_IMGS[this.props.animal],
@@ -31,22 +33,39 @@ class AnimalImage extends Component {
 }
 
 AnimalImage.propTypes = {
-  animal: PropTypes.oneOf(['cat', 'dog', 'panda']),
+  animal: PropTypes.oneOf(ANIMALS),
 };
 
-AnimalImage.defaultProps = {
-  animal: 'panda',
-};
+// ? Al tener la prop por defecto en el state, esto no es necesario.
+// AnimalImage.defaultProps = {
+//   animal: 'panda',
+// };
 
 export default class CicloActualizacion extends Component {
   state = { animal: 'panda' };
+
+  renderAnimalButton = (animal) => {
+    return(
+      
+      <button 
+      key={animal} 
+      disabled={animal === this.state.animal}
+      onClick={() => this.setState({ animal })}>{animal}
+        </button>
+    )
+  }
 
   render() {
     return (
       <div>
         <h4>Ciclo de actualización </h4>
-        <button onClick={() => this.setState({ animal: 'panda' })}>
-          Panda
+        {this.renderAnimalButton('panda')}
+        {this.renderAnimalButton('cat')}
+        {this.renderAnimalButton('dog')}
+        <p></p>
+        {ANIMALS.map(this.renderAnimalButton)}
+        <p></p>
+        <button onClick={() => this.setState({ animal: 'panda' })}>Panda
         </button>
         <button onClick={() => this.setState({ animal: 'cat' })}>Gato</button>
         <button onClick={() => this.setState({ animal: 'dog' })}>Perro</button>
